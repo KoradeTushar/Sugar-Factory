@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header h1{
+                padding:80px;
+                text-align: center;
+                background-color: black;
+                color:white;
+                font-size: 45px;
+                font-family: cursive;
+            }
+            nav{
+                padding-left:350px;
+                overflow:visible;
+                background-color:grey;
+            }
+            nav h3{
+                float:left;
+                padding:15px;
+                font-size: 25px;
+                margin: 10px;
+            }
+            .dropbtn {
+              background-color: #FF8C00;
+              color: white;
+              padding: 26px 35px;
+              font-size: 16px;
+              border: 2px solid black;
+              border-radius: 20px;
+              cursor: pointer;
+              font-family: cursive;
+              overflow: hidden;
+              font-size: 20px;
+            }
+
+            .dropdown {
+              position: relative;
+              display: inline-block;
+              
+            }
+
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #E03DFF;
+              min-width: 250px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+              border-radius:20px;
+              overflow: hidden;
+            }
+
+            .dropdown-content a {
+              color: black;
+              padding: 12px;
+              text-align: center;
+              font-size:20px;
+              text-decoration: none;
+              display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+
+            .dropdown:hover .dropbtn ,button:hover{
+              background-color:#FFCC99;
+              color:black;
+              font-family: cursive;
+            }
+            
+        </style>
+    </head>
+    <body bgcolor=#87CEFA>
+        <header>
+            <h1>Welcome</h1>
+            <h3><marquee>user</marquee></h3>
+        </header>
+        <nav>
+        <h3>
+                <div class="dropdown">
+                <button class="dropbtn">Message</button>
+                <div class="dropdown-content">
+                    <a href="#">Send Message</a>
+                    <a href="#">Check Inbox</a>
+                </div>
+                </div>
+        </h3>
+            <h3><a href="#"><button class="dropbtn">Current Status</button></a></h3>
+        <h3><button class="dropbtn">Pik History</button></h3>
+        <h3><button class="dropbtn">Edit Profile</button></h3>
+    </nav>
+        </body>
+</html>
