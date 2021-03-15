@@ -17,22 +17,22 @@
         
         <%
             String un = request.getParameter("un");
-            String pass = request.getParameter("pass");
+            String Pass = request.getParameter("ps");
             
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
             Statement stmt = con.createStatement();
             
-            ResultSet rs = stmt.executeQuery("select USERNAME,PASSWORD from .... where USERNAME="+un+" and PASSWORD="+pass+"");
+            ResultSet rs = stmt.executeQuery("select * from staff where USERNAME='"+un+"' and PASSWORD='"+Pass+"'");
             
         if(rs.next())
         {
-            session.setAttribute("un",pass);
-            response.sendRedirect("login.html");
+            session.setAttribute("un",Pass);
+            response.sendRedirect("stafflogin.html");
         }
         else
         {
-            out.print("<center>Invalid Passward <a href=farmer.html> Try again </a></center>");
+            out.print("<center>Login Failed <a href=staff.html> Try again </a></center>");
         }
         %>
         

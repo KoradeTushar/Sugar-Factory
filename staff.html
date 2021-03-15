@@ -21,10 +21,14 @@ and open the template in the editor.
             h3{
                 padding:20px; 
             }
+            .input{
+                padding:10px 20px;
+            }
             input{
                 padding:10px 20px;
                 border-radius:20px;
                 overflow: hidden;
+                outline:none;
             }
             .button:hover{
                 color: white;
@@ -34,19 +38,20 @@ and open the template in the editor.
                 color:red;
             }
             </style>
+
     </head>
     <body bgcolor=#DCDCDC>
-        <form action="staff.jsp" method="get">
+        <form action="staff.jsp" method="get" name="stf">
             <center>
                 <hr color="red" size="5">
                 <header><h1>Staff Login Page</h1></header>
             <hr color="red" size="5">
             <h3>User Name <input type="text" name="un" required="required"></h3>
-            <h3>Password <input type="Password" name="pass" required="required"></h3>
-            <hr color="red" size="5">
+            <h3>Password <input type="password" name="ps" required="required"></h3>
+            <hr color="red" size="5">                 
             <input class="button" type="submit" value="submit"> <input type="reset" class="button" value="reset">
             <hr color="red" size="5">
-            <h3>New Registration ???  <a class="su" href="#">Register here</a></h3>
+            <h3>New Registration ???  <a class="su" href="staffregister.html">Register here</a></h3>
             <hr color="red" size="5">
             </center>
         </form>

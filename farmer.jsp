@@ -13,29 +13,37 @@
         <title>JSP Page</title>
     </head>
     
-    <body>
+    <body>  
+        <form action="inbox.jsp" method="post">   
         <%
-          String un = request.getParameter("un");
-          String pass = request.getParameter("pass"); 
-
+          String UN = request.getParameter("un");
+          String pass = request.getParameter("pass");  
+          int tush;
+          
            Class.forName("oracle.jdbc.driver.OracleDriver");
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
            Statement stmt = con.createStatement();
            
-           ResultSet rs = stmt.executeQuery("select USERNAME,PASSWORD from farmers where USERNAME='"+un+"' and PASSWORD='"+pass+"' ");
-
+           ResultSet rs = stmt.executeQuery("select FARMER_ID,USERNAME,PASSWORD from farmers where USERNAME='"+UN+"' and PASSWORD='"+pass+"' ");
+          
         if(rs.next())
         {
-            session.setAttribute("un",pass);
+         %>  
+         
+         <input type="hidden" id="<%=rs.getString(1)%>" name="h">  
+         
+         <% 
+             
             response.sendRedirect("login.html");
         }
         else
         {
-            out.print("<center>Invalid Passward <a href=farmer.html> Try again </a></center>");
+            out.print("<center>Invalid  Passward <a href=farmer.html> Try again </a></center>");
         }
         %>
-        
+    </form>    
   </body>       
         
     
 </html>
+ 

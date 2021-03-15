@@ -48,7 +48,6 @@
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
            Statement stmt = con.createStatement();
            
-           
            int i = stmt.executeUpdate("insert into farmers values(farmer_id.nextval,'"+fnm+"','"+lnm+"','"+mnm+"','"+ad+"','"+gender+"',"+SN+",'"+EA+"','"+satbara+"','"+area+"','"+typeofs+"',TO_DATE('"+ldate+"','YYYY-MM-DD'),TO_DATE('"+expect+"','YYYY-MM-DD'),'"+NF+"','"+bank+"',"+act+","+ifsc+",'"+acctype+"','"+username+"','"+passward+"')");
           
            ResultSet rs = stmt.executeQuery("select FARMER_ID from farmers where USERNAME='"+username+"' and PASSWORD='"+passward+"'");

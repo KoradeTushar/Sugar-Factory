@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+                
+            header h1{ 
+                padding:30px;
+                background-color:skyblue;
+            }
+            h3{
+                padding:20px;
+            }
+            button{
+                padding:10px 40px;
+                margin: 10px 20px;
+                
+            }
+            input{
+                padding:10px 20px;
+            }
+            .input{
+                padding:10px 20px;
+            }
+            tr td .button .input:hover {
+                color: red;
+            }
+            td{
+                background-color:#d3a8c9;
+            }
+        </style>
+    </head>
+    <body bgcolor="neavy blue">
+        <form action="staffregister.jsp" method="get">
+            <center>
+                <header><h1>Staff Registration</h1></header>
+            <table border="5" cellspacing="10" cellpadding="5">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="fname" required="required"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lname" required="required"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="add" required="required"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        Male<input type="radio" value="male" name="gender" required="required">
+                        Female<input type="radio" value="female" name="gender" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td>post</td>
+                    <td>
+                        <select name="sp" class="input">
+                            <option value="">--select--
+                        <option value="staff"  />staff
+                        <option value="manager" />manager
+                            <option value="employee" />employee
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td><input type="text" name="user" required="required"></td>
+                </tr>
+                <tr>
+                    <td>Passward</td>
+                    <td><input type="text" name="pass" required="required"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <input type="submit" value="submit">
+                            <input type="reset" value="reset">
+                        </center>
+                    </td>
+                </tr>
+            </table>
+            </center>
+        </form>
+    </body>
+</html>
