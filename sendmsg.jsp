@@ -6,7 +6,7 @@
 
 <%@page import="java.sql.*"%>
 <%@page import="java.sql.DriverManager"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,14 +15,16 @@
     </head>
     <body>
         <%
-            String Fid = request.getParameter("fid");
+            String name = request.getParameter("nm"); 
             String MSG = request.getParameter("msg");
             
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
             Statement stmt = con.createStatement();
             
-            int i = stmt.executeUpdate("insert into messages values('"+MSG+"',"+Fid+")");
+            String x = (String) session.getAttribute("fname");  
+       
+            int i = stmt.executeUpdate("insert into farmer_messages values('"+MSG+"','"+x+"')");
             
             if(i>0)
             {

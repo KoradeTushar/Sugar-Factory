@@ -14,14 +14,14 @@
     </head>
     <body>
         <%
-         String FID = request.getParameter("fid");
-         int Fid = Integer.parseInt(FID);
         
         Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
             Statement stmt = con.createStatement();
+            
+        int k = (Integer) session.getAttribute("FarmerID");
         
-        ResultSet rs = stmt.executeQuery("select TYPE_OF_SUGARCANE,LAGVAD_DATE,EXPECT_DATE,AREA from farmers where FARMER_ID="+Fid+"");
+        ResultSet rs = stmt.executeQuery("select TYPE_OF_SUGARCANE,LAGVAD_DATE,EXPECT_DATE,AREA from farmers where FARMER_ID="+k+"");
         
         while(rs.next())
         {
@@ -44,7 +44,7 @@
             </tr>
         </table>
     </center>
-        
+        <center><a href="login.html"><button>Go Back</button></a></center>
         
         <%
         }

@@ -19,7 +19,7 @@ and open the template in the editor.
                 color:white;
             }
             h3{
-                padding:20px; 
+                padding:10px; 
             }
             .input{
                 padding:10px 20px;
@@ -37,17 +37,34 @@ and open the template in the editor.
             .su:hover{
                 color:red;
             }
+            .sadiq{
+                padding:10px 10px;
+                outline: none;
+                border-radius: 20px;
+            }
             </style>
 
     </head>
     <body bgcolor=#DCDCDC>
-        <form action="staff.jsp" method="get" name="stf">
+        <form action="staff.jsp" method="get" name="stf"> 
             <center>
                 <hr color="red" size="5">
-                <header><h1>Staff Login Page</h1></header>
+                <header><h1>Staff Login Page</h1></header> 
             <hr color="red" size="5">
             <h3>User Name <input type="text" name="un" required="required"></h3>
             <h3>Password <input type="password" name="ps" required="required"></h3>
+            <h3> Select post
+                <select name="meow" class="sadiq" required="required">
+                    <option />--Select--
+                    <option value="manager" /> MANAGER
+                    <option value="production" /> PRODUCTION
+                    <option value="agri" /> AGRICULTURE DEPT
+                    <option value="cashier" /> CASHIER
+                    <option value="chief-engineer" /> CHIEF ENGINEER
+                    <option value="md" /> MANAGING DIRECTOR ( MD )
+                    <option value="admin" /> ADMIN
+                </select>
+            </h3>
             <hr color="red" size="5">                 
             <input class="button" type="submit" value="submit"> <input type="reset" class="button" value="reset">
             <hr color="red" size="5">

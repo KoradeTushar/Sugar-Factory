@@ -13,30 +13,36 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% 
-            String  FID = request.getParameter("h");      
-            %> 
-            
-            <%=FID%>
-            
+ 
             <%       
             
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName("oracle.jdbc.driver.OracleDriver");    
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
             Statement stmt = con.createStatement();
             
-            ResultSet rs = stmt.executeQuery("select message from messages where FARMER_ID="+FID+"  ");
+            int k = (Integer) session.getAttribute("FarmerID");
+            
+            ResultSet rs = stmt.executeQuery("select message from messages where msg_from='admin'");
 
-
-            while(rs.next())
-            {
-         %> 
+                %>
     <center>
-        <%=rs.getString(1)%>
-        <%="hii"+FID+"hii"%>
-    </center>   
-        <%
+                <table border="2" cellspacing="10" cellpadding="50">
+                    <tr>
+                        <th>Messages from admin</th>
+                    </tr>
+                    <%
+                    while(rs.next())
+                    {  
+                    %>
+                    <tr>
+                        <td><%=rs.getString(1)%></td>
+                    </tr>
+                    <%
             }
         %>
+                </table>
+                <center><a href="login.html"><button>Go Back</button></a></center>
+    </center>      
+    
     </body>
 </html>

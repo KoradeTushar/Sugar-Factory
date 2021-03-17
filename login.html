@@ -81,26 +81,45 @@ and open the template in the editor.
               color:black;
               font-family: cursive;
             }
+            .unav .b a{
+                
+              padding-left: 1350px;  
+            }
+            .unav{
+
+                background-color: grey;
+                padding:1px;
+            }
+            .btn{
+                padding:10px 50px;
+            }
             
         </style>
     </head>
     <body bgcolor=#87CEFA>
+        <div class="unav">
+                <h3 class="b">
+                    <a href="index.html" >
+                        <button class="btn">LogOut</button>
+                    </a>
+                </h3>
+            </div>
         <header>
             <h1>Welcome</h1>
-            <h3><marquee>user</marquee></h3>
+            <h3><marquee>date</marquee></h3>
         </header>
         <nav>
         <h3>
                 <div class="dropdown">
-                <button class="dropbtn">Message</button>
+                <button class="dropbtn">Message</button> 
                 <div class="dropdown-content">
-                    <a href="sendmsg.html">Send Message</a>
+                    <a href="sendmsg.html">Send Message</a> 
                     <a href="inbox.jsp">Check Inbox</a>  
                 </div>
                 </div>
         </h3>
-            <h3><a href="currentstatus.html"><button class="dropbtn">Current Status</button></a></h3>
-            <h3><a href="pik.html"><button class="dropbtn">Pik History</button></a></h3>
+            <h3><a href="currentstatus.jsp"><button class="dropbtn">Current Status</button></a></h3>
+            <h3><a href="pik.jsp"><button class="dropbtn">Pik History</button></a></h3>
             <h3><a href="#"><button class="dropbtn">Edit Profile</button></a></h3>
         
     </nav>

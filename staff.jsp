@@ -6,29 +6,37 @@
 
 <%@page import="java.sql.*"%>
 <%@page import="java.lang.*"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
         <title>JSP Page</title>
     </head>
     <body>
         
-        <%
+        <% 
             String un = request.getParameter("un");
             String Pass = request.getParameter("ps");
+            String vidya = request.getParameter("meow"); 
             
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
             Statement stmt = con.createStatement();
             
-            ResultSet rs = stmt.executeQuery("select * from staff where USERNAME='"+un+"' and PASSWORD='"+Pass+"'");
-            
+            ResultSet rs = stmt.executeQuery("select * from staff where USERNAME='"+un+"' and PASSWORD='"+Pass+"' and STAFF_POST='"+vidya+"' ");
+          
+  
         if(rs.next())
         {
-            session.setAttribute("un",Pass);
-            response.sendRedirect("stafflogin.html");
+           if(vidya.equals("manager")) 
+           {
+               response.sendRedirect("stafflogin.html");
+           }
+           else if(vidya.equals("admin"))
+           {
+               response.sendRedirect("admin.html"); 
+           }
         }
         else
         {
