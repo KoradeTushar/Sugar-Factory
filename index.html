@@ -1,102 +1,39 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            header h1{
-                padding:80px;
-                text-align: center;
-                background-color: black;
-                color:white;
-                font-size: 45px;
-                font-family: cursive;
-            }
-            nav{
-                padding-left:400px;
-                overflow:visible;
-                background-color:grey;
-            }
-            nav h3{
-                float:left;
-                padding:15px;
-                font-size: 25px;
-                margin: 10px;
-            }
-            .dropbtn {
-              background-color: #00f53d;
-              color: white;
-              padding: 26px;
-              font-size: 16px;
-              border: 2px solid black;
-              border-radius: 20px;
-              cursor: pointer;
-              outline:none;
-              font-family: cursive;
-            }
-
-            .dropdown {
-              position: relative;
-              display: inline-block;
-              
-            }
-
-            .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: #66FFCC;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-              border-radius:20px;
-              overflow: hidden;
-              margin:1px;
-            }
-
-            .dropdown-content a {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-            }
-
-            .dropdown-content a:hover {background-color: #f1f1f1}
-
-            .dropdown:hover .dropdown-content {
-              display: block;
-            }
-
-            .dropdown:hover .dropbtn ,button:hover{
-              background-color:#FFCC99;
-              color:black;
-              font-family: cursive;
-            }
-            
-        </style>
-    </head>
-    <body bgcolor=#F0E68C>
-        <header><h1>Tatyasaheb Kore Sahkari Sakhar Karkhana , Kolhapur.</h1></header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <link rel="stylesheet" href="d1.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
         <nav>
-            <center>
-                <h3><button class="dropbtn">Home</button></h3>
-            <h3><button class="dropbtn">about us</button></h3>
-            <h3>
-                <div class="dropdown">
-                <button class="dropbtn">Login</button>
-                <div class="dropdown-content">
-                    <a href="farmer.html">Farmer</a>
-                    <a href="staff.html">Staff</a>
-                </div>
-                </div>
-            </h3>
-            <h3><a href="#"><button class="dropbtn">Login of Harvesting</button></a></h3>
-            </center>
+            <div class="logo">
+                <h1 class="animated infinite heartBeat">Sugar Factory</h1>
+            </div>
+
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
         </nav>
-    </body>
+            <main>
+                <section>
+                    <h3>Welcome</h3>
+                    <h1>do visit <span class="change_content"> </span> </h1>
+                    <p>We Care Our Farmers</p>
+                    <a href="farmer.html" class="btnone">Farmer Login</a>
+                    <a href="staff.html" class="btntwo">Staff Login</a>
+                </section>
+            </main>
+        
+    </header>
+</body>
 </html>
