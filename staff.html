@@ -6,71 +6,49 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Sugar factory | Staff Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            center{
-                padding:50px;
-            }
-            header h1{
-                padding:60px;
-                background-color:#000080;
-                color:white;
-            }
-            h3{
-                padding:10px; 
-            }
-            .input{
-                padding:10px 20px;
-            }
-            input{
-                padding:10px 20px;
-                border-radius:20px;
-                overflow: hidden;
-                outline:none;
-            }
-            .button:hover{
-                color: white;
-                background-color: black;
-            }
-            .su:hover{
-                color:red;
-            }
-            .sadiq{
-                padding:10px 10px;
-                outline: none;
-                border-radius: 20px;
-            }
-            </style>
+        <link rel="stylesheet" href="login.css">
+      
 
     </head>
     <body bgcolor=#DCDCDC>
         <form action="staff.jsp" method="get" name="stf"> 
-            <center>
-                <hr color="red" size="5">
-                <header><h1>Staff Login Page</h1></header> 
-            <hr color="red" size="5">
-            <h3>User Name <input type="text" name="un" required="required"></h3>
-            <h3>Password <input type="password" name="ps" required="required"></h3>
-            <h3> Select post
-                <select name="meow" class="sadiq" required="required">
-                    <option />--Select--
-                    <option value="manager" /> MANAGER
-                    <option value="production" /> PRODUCTION
-                    <option value="agri" /> AGRICULTURE DEPT
-                    <option value="cashier" /> CASHIER
-                    <option value="chief-engineer" /> CHIEF ENGINEER
-                    <option value="md" /> MANAGING DIRECTOR ( MD )
-                    <option value="admin" /> ADMIN
+            <div class="center">
+      <h1>Staff Login</h1>
+      
+        <div class="txt_field">
+          <input type="text" required name="un">
+          <span></span>
+          <label>Username</label>
+        </div>
+      
+        <div class="txt_field">
+          <input type="password" required name="ps">
+          <span></span>
+          <label>Password</label>
+        </div>
+      
+      
+      <h3> Select post
+                <select name="post" class="sadiq" required="required">
+                    <option value="">----SELECT----
+                            <option value="admin" />ADMIN
+                            <option value="BookingManager" />BOOKING MANAGER                            
+                            <option value="cashier" />CASHIER
                 </select>
             </h3>
-            <hr color="red" size="5">                 
-            <input class="button" type="submit" value="submit"> <input type="reset" class="button" value="reset">
-            <hr color="red" size="5">
-            <h3>New Registration ???  <a class="su" href="staffregister.html">Register here</a></h3>
-            <hr color="red" size="5">
-            </center>
+      
+      
+        
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="#">Contact to Admin</a>
+        </div>
+     
+    </div>
+            
         </form>
     </body>
 </html>

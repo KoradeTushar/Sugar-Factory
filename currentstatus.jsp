@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body bgcolor="black">
         <%
         
         Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -28,21 +28,21 @@
         %>
         
     <center>
-        <h1>Current Status</h1>
-        <table border="2" cellspacing="20" cellpadding="50">
+        <h1>Profile</h1>
+        <table border="2" cellspacing="20" cellpadding="50" bgcolor="white">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Area</th>
-                <th>Type of Sugarcane</th>
-                <th>Lagvad Date</th>
-                <th>Expect date</th>
+                <th>7/12 name</th>
+                <th>bank name</th>
+                <th>Account number</th>
             </tr>
             <tr>
                 <td><%=rs.getString(2)%></td>
                 <td><%=rs.getString(3)%></td>
                 <td><%=rs.getString(10)%></td>
-                <td><%=rs.getString(11)%></td>
+                <td><%=rs.getString(9)%></td>
                 <td><%=rs.getString(12)%></td>
                 <td><%=rs.getString(13)%></td>
             </tr>

@@ -29,9 +29,11 @@
             String EA = request.getParameter("ea");
             String satbara = request.getParameter("sat");
             String area = request.getParameter("area");
+            
             String typeofs = request.getParameter("sugarcane");
             String ldate = request.getParameter("lagvad");
             String expect = request.getParameter("expect");
+            
             String NF = request.getParameter("nf");
             String bank = request.getParameter("bank");
             String accountno = request.getParameter("an");
@@ -48,7 +50,7 @@
            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
            Statement stmt = con.createStatement();
            
-           int i = stmt.executeUpdate("insert into farmers values(farmer_id.nextval,'"+fnm+"','"+lnm+"','"+mnm+"','"+ad+"','"+gender+"',"+SN+",'"+EA+"','"+satbara+"','"+area+"','"+typeofs+"',TO_DATE('"+ldate+"','YYYY-MM-DD'),TO_DATE('"+expect+"','YYYY-MM-DD'),'"+NF+"','"+bank+"',"+act+","+ifsc+",'"+acctype+"','"+username+"','"+passward+"')");
+           int i = stmt.executeUpdate("insert into farmers values(farmer_id.nextval,'"+fnm+"','"+lnm+"','"+mnm+"','"+ad+"','"+gender+"',"+SN+",'"+EA+"','"+satbara+"','"+area+"','"+NF+"','"+bank+"',"+act+","+ifsc+",'"+acctype+"','"+username+"','"+passward+"')");
           
            ResultSet rs = stmt.executeQuery("select FARMER_ID from farmers where USERNAME='"+username+"' and PASSWORD='"+passward+"'");
           

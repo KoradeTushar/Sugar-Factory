@@ -18,24 +18,29 @@
         <% 
             String un = request.getParameter("un");
             String Pass = request.getParameter("ps");
-            String vidya = request.getParameter("meow"); 
+            String post = request.getParameter("post"); 
             
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sugarfactory","sf123");
             Statement stmt = con.createStatement();
             
-            ResultSet rs = stmt.executeQuery("select * from staff where USERNAME='"+un+"' and PASSWORD='"+Pass+"' and STAFF_POST='"+vidya+"' ");
+            ResultSet rs = stmt.executeQuery("select * from staff where USERNAME='"+un+"' and PASSWORD='"+Pass+"' and STAFF_POST='"+post+"' ");
           
   
         if(rs.next())
         {
-           if(vidya.equals("manager")) 
+            
+           if(post.equals("admin")) 
            {
-               response.sendRedirect("stafflogin.html");
+               response.sendRedirect("admin.html");
            }
-           else if(vidya.equals("admin"))
+           else if(post.equals("BookingManager"))
            {
-               response.sendRedirect("admin.html"); 
+               response.sendRedirect("bookingstaff.jsp"); 
+           }
+           else if(post.equals("production_manager"))
+           {
+               response.sendRedirect("production_manager.html");
            }
         }
         else

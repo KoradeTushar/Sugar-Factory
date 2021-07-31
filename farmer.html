@@ -1,54 +1,33 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            center{
-                padding:50px;
-            }
-            header h1{
-                padding:60px;
-                background-color:#FFCCFF;
-            }
-            h3{
-                padding:20px; 
-            }
-            input{
-                padding:10px 20px;
-                border-radius:20px;
-                overflow: hidden;
-                outline:none;
-            }
-            .button:hover{
-                color: white;
-                background-color: black;
-            }
-            .su:hover{
-                color:red; 
-            }
-        </style>
-    </head>
-    <body bgcolor=#ffed59>
-        <form action="farmer.jsp" method="get">
-            <center>
-                <hr color="red" size="5">
-                <header><h1>Farmer Login Page</h1></header>
-            <hr color="red" size="5">
-            <h3>User Name <input type="text" name="un" required="required"></h3>
-            <h3>Password <input type="Password" name="pass" required="required"></h3>
-            <hr color="red" size="5">
-            <input class="button" type="submit" value="submit"> <input type="reset" class="button" value="reset">
-            <hr color="red" size="5">
-            <h3>New Registration ???  <a class="su" href="register.html">Register here</a></h3>
-            <hr color="red" size="5">
-            </center>
-        </form>
-    </body>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+      <form action="farmer.jsp" method="post" name="">
+    <div class="center">
+      <h1>Farmer Login</h1>
+      
+        <div class="txt_field">
+          <input type="text" required name="un">
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required name="pass">
+          <span></span>
+          <label>Password</label>
+        </div>
+        
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="register.html">Signup</a>
+        </div>
+     
+    </div>
+          </form>
+  </body>
 </html>
